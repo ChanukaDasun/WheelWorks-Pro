@@ -1,73 +1,139 @@
-# React + TypeScript + Vite
+# 🚗 WheelWork-Pro | Tyre Centre Internal Management Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**WheelWork-Pro** is a modern, responsive frontend application built to streamline the internal operations of a tyre centre.  
+It simplifies **employee attendance tracking**, **salary computation**, and **stock management** through a clean and intuitive web interface.
 
-Currently, two official plugins are available:
+This project focuses purely on the **frontend**, developed with **React (TypeScript)** and styled using **shadcn/ui** to ensure scalability, maintainability, and professional-grade design consistency.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🧩 Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 👥 Employee Management
+- Manage employee records (add, edit, remove)
+- Role-based interface for Admins and Employees
+- View employee profiles and status (active/inactive)
 
-## Expanding the ESLint configuration
+### 🕒 Attendance Tracking
+- Employees can **clock in/out** and view attendance history
+- Admins can **monitor, edit, and validate** attendance logs
+- Automatic calculation of total working hours
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 💰 Salary Calculation
+- Generate salaries based on logged working hours
+- Configure hourly rates and deductions
+- View salary slips and monthly summaries
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 📦 Stock Management
+- Track **incoming stock** (from main branch)
+- Log **outgoing stock** (to customers or internal use)
+- Low-stock alerts and history logs
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 📊 Dashboard & Reports
+- Admin dashboard with quick stats on attendance, stock, and performance
+- Filterable data tables and chart visualizations
+- Clean navigation between modules
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Category | Technology |
+|-----------|-------------|
+| **Frontend Framework** | [React](https://react.dev/) (with [TypeScript](https://www.typescriptlang.org/)) |
+| **UI Library** | [shadcn/ui](https://ui.shadcn.com/) |
+| **Styling** | Tailwind CSS |
+| **Routing** | React Router DOM |
+| **State Management** | React Hooks / Context API |
+| **Charts (if used)** | Recharts / Chart.js |
+| **Icons** | Lucide React |
+| **Package Manager** | npm / pnpm / yarn |
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 🧱 Project Structure
+
+wheelwork-pro-frontend/
+├── src/
+│ ├── components/ # Reusable UI components
+│ ├── pages/ # Main pages (Dashboard, Attendance, Stock, etc.)
+│ ├── layouts/ # Shared layouts & navigation
+│ ├── context/ # App context and state management
+│ ├── assets/ # Icons, images
+│ ├── lib/ # Utility and helper functions
+│ └── App.tsx # Root application file
+├── public/ # Static assets
+├── package.json
+└── README.md
+
+yaml
+Copy code
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to set up the project locally.
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/<your-username>/wheelwork-pro-frontend.git
+cd wheelwork-pro-frontend
+2️⃣ Install Dependencies
+bash
+Copy code
+npm install
+or
+
+bash
+Copy code
+pnpm install
+3️⃣ Start the Development Server
+bash
+Copy code
+npm run dev
+Your app will be running at:
+👉 http://localhost:5173 (Vite default port)
+
+📁 Figma Design
+The UI/UX design was collaboratively created by a 10-member team in Figma, focusing on:
+
+Consistent component styling
+
+Industrial and professional color palette
+
+Simple, workflow-optimized layouts
+
+👨‍💻 Team Contributions
+Role	Responsibility
+UI/UX Leads	Design system, color palette, typography
+Attendance & Salary Designers	Attendance flow, salary UI, tables
+Stock Designers	Incoming & outgoing stock interfaces
+Dashboard Team	Analytics, admin navigation
+Integrations & Review	Component linking, final prototype testing
+
+🧠 Future Enhancements
+🔐 Authentication & role-based routing
+
+📊 Integration with backend APIs for real data
+
+🌓 Dark mode
+
+📱 Mobile-responsive optimization
+
+📜 License
+This project is created for academic and demonstration purposes.
+© 2025 WheelWork-Pro Team. All rights reserved.
+
+💬 Acknowledgements
+Special thanks to the team members for completing the design sprint and development under a 7-day deadline, showcasing teamwork and design consistency.
+
+WheelWork-Pro — Streamlining tyre centre operations with a modern, efficient management interface.
+
+yaml
+Copy code
+
+---
+
+Would you like me to generate a **short GitHub description + repo tags** (for the right-hand sidebar on your repo — e.g., “tyre management, react, frontend, ui-design”)?  
+It’ll help your repo appear more professional and searchable.
