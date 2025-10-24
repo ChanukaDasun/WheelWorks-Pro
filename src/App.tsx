@@ -1,16 +1,21 @@
-import { ArrowUpIcon } from "lucide-react"
-import { Button } from "./components/ui/button"
+import { BrowserRouter, Routes } from "react-router-dom";
+import { Route } from "react-router";
+import AdminDashboard from "./pages/AdminDashboard";
+import Login from "./pages/login";
+import { AuthProvider } from "./contexts/AuthContext";
 
 function App() {
 
   return (
     <>
-      <div className="flex flex-wrap items-center gap-2 md:flex-row">
-        <Button variant="outline">Button</Button>
-      </div>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/admin-dashboard" element={<AdminDashboard />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
+      </AuthProvider>
     </>
   )
 }
