@@ -120,20 +120,3 @@ Integrations & Review	Component linking, final prototype testing
 🌓 Dark mode
 
 📱 Mobile-responsive optimization
-
-📜 License
-This project is created for academic and demonstration purposes.
-© 2025 WheelWork-Pro Team. All rights reserved.
-
-💬 Acknowledgements
-Special thanks to the team members for completing the design sprint and development under a 7-day deadline, showcasing teamwork and design consistency.
-
-WheelWork-Pro — Streamlining tyre centre operations with a modern, efficient management interface.
-
-yaml
-Copy code
-
----
-
-Would you like me to generate a **short GitHub description + repo tags** (for the right-hand sidebar on your repo — e.g., “tyre management, react, frontend, ui-design”)?  
-It’ll help your repo appear more professional and searchable.
