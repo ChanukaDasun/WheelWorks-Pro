@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
-import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
 import { Badge } from '../components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
@@ -15,7 +14,6 @@ import {
   Download, 
   Eye,
   DollarSign,
-  Clock,
   Users,
   FileText
 } from 'lucide-react';
@@ -137,8 +135,6 @@ export default function SalaryManagement() {
   const [payslips, setPayslips] = useState<Payslip[]>(mockPayslips);
   const [selectedEmployee, setSelectedEmployee] = useState<Employee | null>(null);
   const [selectedPayslip, setSelectedPayslip] = useState<Payslip | null>(null);
-  const [isCalculateDialogOpen, setIsCalculateDialogOpen] = useState(false);
-  const [isPayslipDialogOpen, setIsPayslipDialogOpen] = useState(false);
   const [selectedMonth, setSelectedMonth] = useState('October');
   const [selectedYear, setSelectedYear] = useState(2024);
 

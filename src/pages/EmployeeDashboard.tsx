@@ -10,7 +10,6 @@ import {
   Pause, 
   Square,
   Calendar,
-  Timer,
   Coffee
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
